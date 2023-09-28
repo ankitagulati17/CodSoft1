@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Piedra&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Brishti</h1>
+            </div>
+            <ul>
+                <li>
+                    <a id="home" onclick="home()">Home</a>
+                    <a id="shop" onclick="shop()">Shops</a>
+                    <a id="blog" onclick="blog()">Blog</a>
+                    <a id="about" onclick=" about()">About</a>
+                    <a id="contact" onclick="contact()">Contact</a>
+                    <i onclick="addItem()" class="fa-sharp fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="mainPage">
+            <div class="text">
+                <h2>Brishti...</h2>
+                <h1 class="heads">Super Value Deals</h1>
+                <h1>On All Products</h1>
+                <p>#YourBrandStyle and become part of our fashion-forward community.</p>
+                <button>Explore</button>
+            </div>
+            <img src="data:image/jpeg;base64,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" alt="">
+        </div>
+
+
+
+        <div class="cardMen">
+            <div class="head">
+                <h1>Trends <span>Men's Wear</span></h1>
+            </div>
+            <div class="card" id="item1">
+                <div class="crd">
+                    <img src="https://rukminim2.flixcart.com/image/832/832/l4oi4cw0/shirt/d/j/g/l-4000-combraided-original-imagfgqsk8he6dpg.jpeg?q=70" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Cotton Trending Shirt's</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button onclick="add(item1)">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="https://cdn.shopify.com/s/files/1/0613/8304/9443/products/9_de64113b-c27c-4c45-9ce3-96c2cf581a04_2048x2048.jpg?v=1663888104" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Cotton Trending Shirt's</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYt5DatozKg4bEla1tBLbcplYRQ5QwNjX8R7mbXprtneByneJqa_N0c36tIACjivR5TD0&usqp=CAU" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Cotton Trending Shirt's</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cardgirl">
+            <div class="head">
+                <h1>Brishti <span>Women's Wear</span></h1>
+            </div>
+
+            <div class="card">
+                <div class="crd">
+                    <img src="https://m.media-amazon.com/images/I/61LMjmxKDSL._UX679_.jpg" alt="" onclick="showCard(this) ">
+                    <div class="txt">
+                        <h3>Trending Girl Tops</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1683207220_1008659.jpg?w=360&dpr=1.0" alt="" onclick="showCard(this) ">
+                    <div class="txt">
+                        <h3>Trending Girl Tops</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/24485700/2023/8/14/b57ac7b9-4096-4389-b2e1-c8d10e4f78f81692012176629CHIMPAAANZEEWomenGreenTartanChecksOpaqueCheckedCasualShirt1.jpg" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Trending Girl Tops</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Full cart  -->
+        <div class="fullPage">
+            <img id="cartImg" src=" " alt="">
+            <div class="cartText">
+                <h1>Brishti Offer : Trending Shop <br> Now</h1>
+                <h2>Special Price</h2>
+                <h2>$11</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                <div class="btn">
+                    <button>Buy Now</button>
+                    <button onclick="addToCart()">Add To Cart</button>
+
+                </div>
+                <div class="btns">
+                    <button class="relode" onclick="location.reload()">Back </button>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- add to cart -->
+        <div class="addCart">
+
+        </div>
+
+        <div class="blogContent">
+            <div class="head">
+                <h1>Brishti Top <span>Blog's</span></h1>
+            </div>
+
+            <div class="trd">
+                <div class="trending">
+                    <img src="https://m.media-amazon.com/images/I/71DXDGkLD9L._UY679_.jpg" alt="">
+                    <div class="txt">
+                        <h3>Trending Girl Cloths</h3><br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, animi expedita?</p><br>
+                        <a href="https://influencermarketinghub.com/best-fashion-blogs/">Read More</a>
+                    </div>
+                </div>
+                <div class="trending">
+                    <img src="https://i.pinimg.com/originals/4d/ab/10/4dab1057d24fb0bbd7830b0992ff918c.jpg" alt="">
+                    <div class="txt">
+                        <h3>Trending Boys Cloths</h3> <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, animi expedita?</p><br>
+                        <a href="https://www.apetogentleman.com/">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutText">
+                <h1>#Know Us...</h1>
+                <p>#YourBrandStyle and become part of our fashion-forward community.</p>
+            </div>
+
+            <div class="aboutus">
+                <img src="https://t4.ftcdn.net/jpg/04/84/87/61/360_F_484876187_u6HIlCgA2iZdfkoOamuQa43OJH2zaDVR.jpg" alt="">
+                <div class="dumiText">
+                    <h1>Who we are ?</h1>
+                    <p>Welcome to Brishti !
+
+At Brishti, we are passionate about fashion and dedicated to providing you with the latest trends and timeless classics in clothing. Our mission is to help you express your unique style and feel confident in what you wear..</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact -->
+
+        <div class="contact">
+            <div class="contactBanner">
+                <h1>#Let's Connect</h1>
+                <p>#YourBrandStyle and become part of our fashion-forward community.</p>
+
+            </div>
+            <div class="connect">
+                <div class="connectText">
+                    <h1>Visit Our Office or Contact <br> Us Today</h1>
+                    <p>Address : Tilak Nagar,Delhi</p>
+                    <p>Contact : dumiemail@gmail.com</p>
+                    <p>Number : 999999000011</p>
+                </div>
+                <img src="map.PNG" alt="">
+            </div>
+
+            <div class="form">
+                <h1>Connect with Us. Fill Form</h1>
+                <input type="text" placeholder="Enter Your FirstName"> <br>
+                <input type="text" placeholder="Enter Your LsstName"> <br>
+                <input type="text" placeholder="Enter Your Email"><br>
+                <input type="text" placeholder="Enter Your Number"><br>
+                <input type="text" placeholder="Enter Your Address"><br>
+                <button>Submit</button>
+
+            </div>
+        </div>
+
+        <div class="letter">
+            <div class="sign">
+                <h2>Sign Up for NewsLetter</h2>
+                <p>choosing eco-friendly materials and supporting ethical manufacturing processes.</p>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Enter Email Address">
+                <button>Sign Up</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <div class="footer">
+            <div class="Ftext">
+                <h1>Trends</h1>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Satisfation</p>
+
+            </div>
+            <div class="Ftext">
+                <h3>About US</h3>
+                <p>Adrress :Tilak Nagar , Delhi
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Satisfation</p>
+
+            </div>
+            <div class="Ftext">
+                <h3>Contect</h3>
+                <p>9989003229</p>
+                <p>Customer</p>
+                <p>Comming up..</p>
+                <p>New Arrival</p>
+
+            </div>
+            <div class="Ftext">
+                <h3>Trending</h3>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>SHops</p>
+                <p></p>
+
+            </div>
+        </div>
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
